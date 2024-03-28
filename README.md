@@ -59,6 +59,28 @@ The following plots the averages across the years of the number of passengers in
 > - What source of inspiration do you take? Visualizations that you found on other websites or magazines (might be unrelated to your data).
 > - In case you are using a dataset that you have already explored in another context (ML or ADA course, semester project...), you are required to share the report of that work to outline the differences with the submission for this class.
 
+**Previous usage of the data**
+This dataset is very likely to be used by many companies and instituions for various reasons.
+Given the fact the related dataset was initially put together by a reliable source, contains many thousand datapoints across many different European countries there are many possibilities for organizations to derive insights.
+Some examples of a previous usage of this dataset includes
+- NGOs or Governments for Policy-making: European airports are often partially owned by countries and therefore are an 
+important cornerstone for infrastructure. In order to be able to pass suitable laws and plan infrastructure, this dataset can be used by NGOs to suggest laws or by directly by policy makers.
+Since the European Union is heavily involved in the planning of infrastructure due to the EU's Green New Deal, a change in annual passengers can be used to make decisions about changes in infrastrucutre. An exmple for this would be the Airport of Vienna, where the debate about a third runway involved lawmakers on different levels.
+But also cities or other communities can use such a dataset to forecast expected passengers which is important for 
+planning construction works during times with fewer passangers.
+
+This dataset can also be used in a scientific context to provide reasons for certain observations mainly related to the movement/mobility of people on a larger scale.
+As an example studies focused on national CO2 emissions heavily rely on flight data since this is a very large CO2 
+emitting sector but also might provide reasons why e.g. the pollution of rivers or CO2 emissions from cars changed drastically in certain regions which heavily rely on tourism.
+
+In additon, this dataset could have also been used to provide insights during the Corona pandemic since it could have been used as a good proxy how certain variants of the coronavirus might spread globally.
+
+Last but not least, the toursim industry is always keen on insights about which destinations might be relevant in the future or changes in the travelling behavior of potential guests.
+Hence this dataset could also be used to optimize cruise routes, finding suitable hotel locations, provide tourist-planning agencies with suitable offers or generally help companies in the tourist industry to identify promising locations.
+
+**Originality of our approach**
+Our approach provides a certain amount of novel
+
 ## Milestone 2 (26th April, 5pm)
 
 **10% of the final grade**
