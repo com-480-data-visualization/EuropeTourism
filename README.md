@@ -52,12 +52,19 @@ The following plots the averages across the years of the number of passengers in
 
 
 ### Related work
-> - What others have already done with the data?
-> - Why is your approach original?
-> - What source of inspiration do you take? Visualizations that you found on other websites or magazines (might be unrelated to your data).
-> - In case you are using a dataset that you have already explored in another context (ML or ADA course, semester project...), you are required to share the report of that work to outline the differences with the submission for this class.
 
-**Previous usage of the data**: Given the fact the related dataset was initially put together by a reliable source and contains many thousand datapoints across many different European countries, there are many possibilities for organizations to use this dataset.
+The following section should provide the reasoning behind our idea, what makes it special and what others have already done with (similar) data.
+
+**Sources of inspiration**<br/>
+Since our group consists of passionate travellers, we have already experienced situations where a visualization like ours would have been useful. After researching some time on possible solutions (such as Flightradar24, see below), we realized that among all existing visualizations there is still a niche for travellers looking for insights for potential travel destinations.
+
+**Originality of our approach**<br/>
+What makes our approach stand out from the crowd is our focus on an interactive data presentation for travellers. The examples listed underneath either focus on professional users (such as HEAVY.AI), don't provide a suitable data representation (such as Flightradar24) for tourists or simply don't provide any interaction at all.
+
+In short, we see our approach as original since we do not only focus on interactive flight data, but also design for travellers.
+
+**Previous usage of the data**<br/>
+Given the fact that the related dataset was initially put together by a reliable source and contains many thousand datapoints across many different European countries, there are many possibilities for organizations to use this dataset.
 
 Some examples of a previous usage of this dataset includes **policy-making, scientific research or business relevant insights**.
 
@@ -81,16 +88,8 @@ There are several examples which are also focused on visualizing similar data.
 This project demonstrates a dashboard for flight data within the USA.
 3. Eurocontrol, [Link](https://www.eurocontrol.int/our-data):
 Eurocontrol provides flight data within Europe, but does this only with the help of bar charts.
-4. Flightradar24, [Link](https://www.flightradar24.com/51.50,-0.12/6)
+4. Flightradar24, [Link](https://www.flightradar24.com/51.50,-0.12/6):
 Flightradar24 provides real time data for the location of planes all around the world.
-
-**Originality of our approach**<br/>
-Our approach provides a certain amount of novelty since we focus on an interactive data presentation. The examples listed above either focus on professional users (such as HEAVY.AI), don't provide a suitable data representation (such as Flightradar24) for tourists or simply don't provide any interaction at all.
-
-Therefore we see our approach as original since we do not only focus on interactive flight data, but also design for travellers.
-
-**Sources of inspiration**<br/>
-Since our group consists of passionate travellers, we have already experienced situations where a visualization like ours would have come handy. After researching some time on possible solutions (such as Flightradar24) we realized that among all existing solutions there is still a niche for travellers looking for insights for potential travel destinations.
 
 ## Milestone 2 (26th April, 5pm)
 
