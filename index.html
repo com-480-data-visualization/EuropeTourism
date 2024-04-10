@@ -42,16 +42,19 @@
         }
         section {
             padding: 20px;
-            height: 100vh; /* Set height to full viewport height */
+            height: 125vh; /* Set height to full viewport height */
             overflow-y: auto; /* Add vertical scrollbar if content exceeds viewport */
         }
         h2 {
             color: darkslateblue;
+            text-align: center; /* Center align headings */
+        }
+        p {
+            text-align: justify; /* Justify paragraph text */
         }
     </style>
 </head>
 <body>
-    <center>
     <header>
         <nav>
             <ul>
@@ -66,7 +69,7 @@
         <section id="home">
             <br>
             <br>
-            <center><h2>Tourism in Europe Throughout the Year</h2></center>
+            <h2>Tourism in Europe Throughout the Year</h2>
             <p>The tourism industry in Europe generates a lot of income for many different countries. 
                 Europe receives hundreds of millions of tourists each year which oftentimes leads to crowding, especially near tourist attractions.
                 Some people do not mind the clutter, yet many tourists struggle to find the right time to visit a country in Europe when it is least touristy.
@@ -84,14 +87,25 @@
                 <br>
                 <br>
                 &nbsp;&nbsp;&nbsp;<b>3.</b> How does the number of passengers entering each country change throughout the year?
-                </p>
+            </p>
         </section>
         <section id="viz1">
             <br>
             <br>
             <h2>Map of International Passengers Arriving Throughout the Year</h2>
-            <p>In this viz we show...</p>
-            <center><img src="International_Arriving_Passengers.png" width="800"></center>
+            <p>This visualization allows the user to see how busy a country is with tourists in each given month and how it changes throughout the years.
+                Users can explore the data through an interactive map and slider. Key features include:
+                <br>
+                <br>
+                &nbsp;&nbsp;&nbsp;1. <b>Map Representation</b>: A map of Europe displaying countries colored according to tourist "busyness," with darker red indicating /”hotter” tourist activity and lighter red indicating lower/”less hot” activity.
+                <br>
+                &nbsp;&nbsp;&nbsp;2. <b>Interactive Slider</b>: Users can select a specific month to observe changes in tourist activity throughout the year.
+                <br>
+               &nbsp;&nbsp;&nbsp;3. <b>Year Selection</b>: Users can choose between viewing the average tourist activity from 2005 to 2020 or select a specific year within that range.
+                <br>
+                &nbsp;&nbsp;&nbsp;4. <b>Hover Information</b>: Hovering over a country reveals the total number of international passengers arriving in that country for the selected month.</p>
+                 <br>
+                <img src="International_Arriving_Passengers.png" width="800" style="display: block; margin: 0 auto;"> <!-- Center image -->
         </section>
         <section id="viz2">
             <br>
@@ -105,6 +119,5 @@
             <h2>Demo Video</h2>
         </section>
     </div>
-</center>
 </body>
 </html>
