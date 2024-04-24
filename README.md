@@ -95,6 +95,27 @@ Flightradar24 provides real time data for the location of planes all around the 
 
 **10% of the final grade**
 
+This visualization allows the user to see how busy a country is with tourists in each given month and how it changes throughout the years. Users can explore the data through an interactive map and slider. Key features include:
+
+1. Map Representation: A map of Europe displaying countries colored according to tourist "busyness," with darker red indicating /”hotter” tourist activity and lighter red indicating lower/”less hot” activity.
+2. Interactive Slider: Users can select a specific month to observe changes in tourist activity throughout the year.
+3. Year Selection: Users can choose between viewing the average tourist activity from 2005 to 2020 or select a specific year within that range.
+4. Hover Information: Hovering over a country reveals the total number of international passengers arriving in that country for the selected month.
+
+This visualization aids users in easily identifying the busiest tourist destinations in Europe for any given month, easily seen by the “hot” and “less hot” regions.
+
+**Enhancement:**
+
+1. Scale Options: Users can choose between viewing absolute numbers of international passengers or relative percentages
+2. Time Animation: A pause/play button allows users to activate or deactivate a time-progressing animation
+
+**Implementation:**
+First, we will draw the map of Europe, then link the data for each country, then implement the slider and then the year selection. Finally, we will try to introduce the enhancements.
+
+**Tools:**
+D3.js maps with TopoJSON and lectures Maps and Practical maps, as well as exercise 8.
+
+<img width="434" alt="image" src="https://github.com/com-480-data-visualization/EuropeTourism/assets/62399852/1182b9fb-c564-42c9-889b-5c20fdce4be1">
 
 ## Milestone 3 (31st May, 5pm)
 
