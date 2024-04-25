@@ -6,11 +6,11 @@
 | Noah Nefsky | 384932 |
 | Daniel Puhringer| 384890 |
 
-[Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
+[Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3-31st-may-5pm)
 
-## Milestone 1 (29th March, 5pm)
+## Milestone 1
 
-**10% of the final grade**
+**10% of the final grade - 29th March, 5pm**
 
 ### Dataset
 
@@ -91,23 +91,25 @@ Eurocontrol provides flight data within Europe, but does this only with the help
 4. Flightradar24, [Link](https://www.flightradar24.com/51.50,-0.12/6):
 Flightradar24 provides real time data for the location of planes all around the world.
 
-## Milestone 2 (26th April, 5pm)
+## Milestone 2
 
-**10% of the final grade**
+**10% of the final grade - 26th April, 5pm**
 
-This visualization allows the user to see how busy a country is with tourists in each given month and how it changes throughout the years. Users can explore the data through an interactive map and slider. Key features include:
+### Visualization 1:
 
-1. Map Representation: A map of Europe displaying countries colored according to tourist "busyness," with darker red indicating /”hotter” tourist activity and lighter red indicating lower/”less hot” activity.
-2. Interactive Slider: Users can select a specific month to observe changes in tourist activity throughout the year.
-3. Year Selection: Users can choose between viewing the average tourist activity from 2005 to 2020 or select a specific year within that range.
-4. Hover Information: Hovering over a country reveals the total number of international passengers arriving in that country for the selected month.
+This visualization allows the user to see how busy a country is with tourists in each given month and how it changes throughout the years. Users can explore the data through an interactive map and slider. 
+
+**Key features include:**
+1. _Map Representation_: A map of Europe displaying countries colored according to tourist "busyness," with darker red indicating /”hotter” tourist activity and lighter red indicating lower/”less hot” activity.
+2. _Interactive Slider_: Users can select a specific month to observe changes in tourist activity throughout the year.
+3. _Year Selection_: Users can choose between viewing the average tourist activity from 2005 to 2020 or select a specific year within that range.
+4. _Hover Information_: Hovering over a country reveals the total number of international passengers arriving in that country for the selected month.
 
 This visualization aids users in easily identifying the busiest tourist destinations in Europe for any given month, easily seen by the “hot” and “less hot” regions.
 
 **Enhancement:**
-
-1. Scale Options: Users can choose between viewing absolute numbers of international passengers or relative percentages
-2. Time Animation: A pause/play button allows users to activate or deactivate a time-progressing animation
+1. _Scale Options_: Users can choose between viewing absolute numbers of international passengers or relative percentages
+2. _Time Animation_: A pause/play button allows users to activate or deactivate a time-progressing animation
 
 **Implementation:**
 First, we will draw the map of Europe, then link the data for each country, then implement the slider and then the year selection. Finally, we will try to introduce the enhancements.
@@ -116,6 +118,29 @@ First, we will draw the map of Europe, then link the data for each country, then
 D3.js maps with TopoJSON and lectures Maps and Practical maps, as well as exercise 8.
 
 <img width="434" alt="image" src="https://github.com/com-480-data-visualization/EuropeTourism/assets/62399852/1182b9fb-c564-42c9-889b-5c20fdce4be1">
+
+
+
+### Visualization 2
+
+This visualization allows the user to select a country and look at the distribution of international passengers flying into that country over all 12 months of the year through a star graph. The design of the star graph allows for users to compare popular vs uncrowded months, as well as visualize the changes over each of the 4 seasons in a year.
+
+**Key features include:**
+1. _Interactive map_: Users are able to select the country they desire. As soon as a country is selected, it is highlighted in green to display the geographic region relevant to the respective star plot.
+2. _Star Plot_: The appropriate data (i.e. average number of flights across the years 2005-2021 of the number of passengers in each country per month) is shown as a star graph with 12 partitions, one for each month of the year.
+3. _Hover Information_: Hovering over a particular data point in the star graph reveals the total number of international passengers arriving in that month for the currently selected country.
+
+**Enhancement:**
+1. 
+2. 
+
+**Implementation:**
+
+
+**Tools:**
+
+<img width="415" alt="image" src="https://github.com/com-480-data-visualization/EuropeTourism/assets/62399852/3c9dfb8e-4553-4edf-a241-f11679931f73">
+
 
 ## Milestone 3 (31st May, 5pm)
 
