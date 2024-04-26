@@ -131,13 +131,16 @@ This visualization allows the user to select a country and look at the distribut
 3. _Hover Information_: Hovering over a particular data point in the star graph reveals the total number of international passengers arriving in that month for the currently selected country.
 
 **Enhancement:**
-1. 
-2. 
+1. _Clustering of climate regions_: Instead of showing data only grouped by country, a radio button next to the map of Europe makes it possible to cluster countries based on their approximate climate regions. Mediterranean countries such as Italy, Greece, Spain but also nordic countries such as Sweden, Norway and Finland can be grouped together since they might follow the same distribution of tourism over the year. In order to clarify which countries belong to a certain group, the name of each country is listed next to the respective radio button.
+2. _Comparing years of the same country_: Instead of showing the average number of flights across multiple years, this enhancement is focused on comparing two particular years for a selected country with one another in absolute numbers. This makes it possible to e.g. better understand the implications of lockdowns (comparing 2019 and 2020 for countries such as Spain) but also provide a general understanding by how much air traffic has increased over a certain timeframe.
 
 **Implementation:**
+Firstly, we will reuse the map of Europe from the first visualization, then link the data for each country, then implement the selection a country and then the generation of the star plot.
+Finally, we will try to introduce the enhancements.
 
 
 **Tools:**
+D3.js maps with TopoJSON and lectures Maps and Practical maps, as well as exercise 8 (same as visualization 1). Specifically for the star-plot we will use the lecture material on tabular data and maybe exercise 4 & 11 if applicable (exercise 11 has not been released at the time of submission). If exercise 11 does not contain examples for star plots, github repositories such as [d3-star-plot](https://github.com/kevinschaul/d3-star-plot?tab=readme-ov-file) or [articles about star-plots](https://medium.com/create-code/build-a-radar-diagram-with-d3-js-9db6458a9248) will provide is with a good foundation to build upon.
 
 <img width="415" alt="image" src="https://github.com/com-480-data-visualization/EuropeTourism/assets/62399852/3c9dfb8e-4553-4edf-a241-f11679931f73">
 
