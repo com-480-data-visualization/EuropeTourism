@@ -1,0 +1,71 @@
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+	line-height: 1.5;
+}
+header {
+	background-color: lightskyblue;
+	color: #fff;
+	padding: 20px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+img.centered {
+    display: block;
+    margin: 0 auto; /* This will horizontally center the image */
+	width: 60%; /* This will stretch the image to be twice as long as its original width */
+    height: auto; /* Maintain the original height of the image */
+    display: block;
+	height: 40%
+}
+
+nav {
+	float: right;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	margin-right: 10px;
+}
+nav ul li {
+	display: inline;
+	margin-left: 20px;
+}
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+.content {
+	margin-right: 20px; /* Adjust according to the navbar width */
+}
+section {
+	padding: 20px;
+	height: 125vh; /* Set height to full viewport height */
+	overflow-y: auto; /* Add vertical scrollbar if content exceeds viewport */
+}
+h2 {
+	color: darkslateblue;
+	text-align: center; /* Center align headings */
+}
+h3 {
+	text-align: justify; /* Justify paragraph text */
+	color: lightslategrey;
+}
+h4 {
+	text-align: justify; /* Justify paragraph text */
+	color: lightslategrey;
+	font-size: 1.1em; /* Adjust the font size as needed */
+}
+.wrap{
+	color: #bfbfbf;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	position: relative;
+}
+
+
