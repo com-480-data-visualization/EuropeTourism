@@ -3,217 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/index.css" />
-
-    <script src="lib/d3.min.js"></script>
-    <script src="lib/topojson.min.js"></script>
-    <script src="lib/jquery-1.11.1.min.js"></script>
-    <title>Tourism in Europe Throughout the Year</title>
-    
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-
-    <script src="visualizations/Map.js"></script>
+    <title>Skeleton: Tourism in Europe Throughout the Year</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#viz1">Passenger Map</a></li>
-                <li><a href="#viz2">Viz 2</a></li>
-                <li><a href="#demo">Demo Video</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="#">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#viz1">Passenger Map</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#viz2">Monthly passenger Star Plot</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true" href="#demo">Demo Video</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <div class="content">
+    <div class="container">
         <section id="home">
             <br>
             <br>
+            <h1>Skeleton: Milestone 2</h1>
+            <i>Note for grading Milestone 2: please refer to Readme.md for the original content</i>
             <h2>Tourism in Europe Throughout the Year</h2>
-            <h4>The tourism industry in Europe generates a lot of income for many different countries. 
+            <p>
+                The tourism industry in Europe generates a lot of income for many different countries.
                 Europe receives hundreds of millions of tourists each year which oftentimes leads to crowding, especially near tourist attractions.
                 Some people do not mind the clutter, yet many tourists struggle to find the right time to visit a country in Europe when it is least touristy.
                 Some people feel the experiences are diluted when countries are overrun with tourists and that it takes away the authentic feeling of visiting a new country.
-                <br>
-                <br>
+            </p>
+            <p>
                 We aim to find when each country’s tourism is in its peak season and has a high population of tourists and when it is in its low seasons where less tourists are present.
                 Our visualizations will express this by showing the concentrations of passengers who fly international to each European country throughout each month of the year. We address the following three questions:
-                <br>
-                <br>
-                &nbsp;&nbsp;&nbsp;<b>1.</b> How busy is each country each month or the year with visitors from other countries?
-                <br>
-                <br>
-                &nbsp;&nbsp;&nbsp;<b>2.</b> When are the peak and low seasons for tourism in each European country?
-                <br>
-                <br>
-                &nbsp;&nbsp;&nbsp;<b>3.</b> How does the number of passengers entering each country change throughout the year?
-            </h4>
-            <br>
-            <img src="chart.png" class="centered" alt="Centered Image" width="400">
+            </p>
+            <ol>
+                <li><b>How busy is each country each month or the year with visitors from other countries?</b></li>
+                <li><b>When are the peak and low seasons for tourism in each European country?</b></li>
+                <li><b>How does the number of passengers entering each country change throughout the year?</b></li>
+            </ol>
         </section>
-        <section id="viz1" class="wrap">
-            <div id="map_header">
+        <section id="viz1">
             <br>
             <br>
-            <h2>Map of International Passengers Arriving Throughout the Year</h2>
-            <p style="color: lightslategrey;">This visualization allows the user to see how busy a country is with tourists in each given month and how it changes throughout the years.
-                Users can explore the data through an interactive map and slider. Key features include:
-                <br>
-                <br>
-                &nbsp;&nbsp;&nbsp;1. <b>Map Representation</b>: A map of Europe displaying countries colored according to tourist "busyness," with darker red indicating /”hotter” tourist activity and lighter red indicating lower/”less hot” activity.
-                <br>
-                &nbsp;&nbsp;&nbsp;2. <b>Interactive Slider</b>: Users can select a specific month to observe changes in tourist activity throughout the year.
-                <br>
-               &nbsp;&nbsp;&nbsp;3. <b>Year Selection</b>: Users can choose between viewing the average tourist activity from 2005 to 2020 or select a specific year within that range.
-                <br>
-                &nbsp;&nbsp;&nbsp;4. <b>Hover Information</b>: Hovering over a country reveals the total number of international passengers arriving in that country for the selected month.</h4>
-                 <br>
-                </div>
-            <div class="inner" style = "background-color : #022F40; border-radius : 10px; padding: 10px">
-               <div style="text-align : center">
-                  <div id="map_div" >
-                     <svg id="map-plot" viewBox="0 0 1000 550" width="55%">
-                        <style>
-                           .country {
-                           stroke: rgb(127, 127, 127);
-                           stroke-width: 1px;
-                           }
-                           .country-label {
-                           fill: black;
-                           text-anchor: middle;
-                           font-size: 10pt;
-                           }
-                           .tooltip {
-                           background-color: black;
-                           border: none;
-                           border-radius: 5px;
-                           padding: 15px;
-                           min-width: 400px;
-                           text-align: left;
-                           color: white;
-                           }
-                        </style>
-                     </svg>
-                  </div>
-                  <div id= time_line>
-                     <svg id="slider" viewBox="0 0 960 100" width="55%">
-                                           <style>
-                                                body {
-                                                font-family:"avenir next", Arial, sans-serif;
-                                                font-size: 12px;
-                                                color: #FFFFFF;
-                                                }
-                                                .ticks {
-                                                font-size: 10px;
-                                                }
-                                                .track,
-                                                .track-inset,
-                                                .track-overlay {
-                                                stroke-linecap: round;
-                                                }
-                                                .track {
-                                                stroke: #000;
-                                                stroke-opacity: 0.3;
-                                                stroke-width: 10px;
-                                                }
-                                                .track-inset {
-                                                stroke: #ddd;
-                                                stroke-width: 8px;
-                                                }
-                                                .track-overlay {
-                                                pointer-events: stroke;
-                                                stroke-width: 50px;
-                                                stroke: transparent;
-                                                cursor: crosshair;
-                                                }
-                                                .handle {
-                                                fill: #fff;
-                                                stroke: #000;
-                                                stroke-opacity: 0.5;
-                                                stroke-width: 1.25px;
-                                                }
-                                           </style>
-                     </svg>
-                  </div>
-                  <div id="button_container">
-                    <!-- the style inside the buttons is a bit messy but it's the only way to overite the framework-->
-                     <div><button id ="total-btn" style = "background-color: #39A9DB; color: rgb(255,255,255) !important">Total</button></div>
-                     <div><button id ="prop-btn" style = "background-color: #1C77C3; color: rgb(255,255,255) !important">Proportional</button></div>
-                     <div style="text-align: center">
-                        <label for="year-select">Select Year:</label>
-                        <select id="year-select">
-                            <option value="0">Total</option>
-                            <option value="2021">2021</option>
-                            <option value="2020">2020</option>
-                            <option value="2019">2019</option>
-                            <option value="2018">2018</option>
-                            <option value="2017">2017</option>
-                            <option value="2016">2016</option>
-                            <option value="2015">2015</option>
-                            <option value="2014">2014</option>
-                            <option value="2013">2013</option>
-                            <option value="2012">2012</option>
-                            <option value="2011">2011</option>
-                            <option value="2010">2010</option>
-                            <option value="2009">2009</option>
-                            <option value="2008">2008</option>
-                            <option value="2007">2007</option>
-                            <option value="2006">2006</option>
-                            <option value="2005">2005</option>
-                        </select>
-                    </div>
-                     <style>
-                        #button_container{
-                        width:100%;
-                        text-align: center;
-                        }
-                        #button_container > div{
-                        display: inline-block;
-                        padding-left: 0.5cm;
-                        padding-right: 0.5cm;
-                        vertical-align: middle;
-                        }
-                        #button_container > div > button {
-                          color: rgb(255,255,255);
-                        }
-                        .separator{
-                        margin-right: 2cm;
-                        }
-                     </style>
-                  </div>
-                  <div class="content">
-                     <!--<hr />-->
-                  </div>
-               </div>
-            </div>
-         </section> </section> -->
-        <section id="viz2">
-            <br>
-            <br>
-            <h2>Monthly passenger Star Plot (Visualization 2)</h2>
-            <p style="color: lightslategrey;">This visualization allows the user to select a country and look at the distribution of international passengers flying into that country over all 12 months of the year through a star graph. The design of the star graph allows for users to compare popular vs uncrowded months, as well as visualize the changes over each of the 4 seasons in a year.</p>
+            <h2>Map of International Passengers Arriving Throughout the Year (Visualization 1)</h2>
+            <p>This visualization allows the user to see how busy a country is with tourists in each given month and how it changes throughout the years. Users can explore the data through an interactive map and slider.
             <hr/>
             <h3>Key features include</h3>
             <ol>
-                <li style="color: lightslategrey;"><b>Interactive map</b>: Users are able to select the country they desire. As soon as a country is selected, it is highlighted in green to display the geographic region relevant to the respective star plot.</li>
-                <li style="color: lightslategrey;"><b>Star Plot</b>: The appropriate data (i.e. average number of flights across the years 2005-2021 of the number of passengers in each country per month) is shown as a star graph with 12 partitions, one for each month of the year.</li>
-                <li style="color: lightslategrey;"><b>Hover Information</b>: Hovering over a particular data point in the star graph reveals the total number of international passengers arriving in that month for the currently selected country.</li>
+                <li><b>Map Representation</b>: A map of Europe displaying countries colored according to tourist "busyness," with darker red indicating /”hotter” tourist activity and lighter red indicating lower/”less hot” activity.</li>
+                <li><b>Interactive Slider</b>: Users can select a specific month to observe changes in tourist activity throughout the year.</li>
+                <li><b>Year Selection</b>: Users can choose between viewing the average tourist activity from 2005 to 2020 or select a specific year within that range.</li>
+                <li><b>Hover Information</b>: Hovering over a country reveals the total number of international passengers arriving in that country for the selected month.</li>
             </ol>
             <hr/>
             <h3>Enhancement</h3>
             <ol>
-                <li style="color: lightslategrey;"><b>Grouping of climate regions</b>: Instead of showing data only per country, a radio button next to the map of Europe makes it possible to group countries based on their approximate climate regions. Mediterranean countries such as Italy, Greece, Spain but also nordic countries such as Sweden, Norway and Finland can be grouped together since they might follow the same distribution of tourism over the year. In order to clarify which countries belong to a certain group, the name of each country is listed next to the respective radio button.</li>
-                <li style="color: lightslategrey;"><b>Comparing years of the same country</b>: Instead of showing the average number of flights across multiple years, this enhancement is focused on comparing two particular years for a selected country with one another in absolute numbers. This makes it possible to e.g. better understand the implications of lockdowns (comparing 2019 and 2020 for countries such as Spain) but also provide a general understanding by how much air traffic has increased over a certain timeframe.</li>
+                <li><b>Scale Options</b>: Users can choose between viewing absolute numbers of international passengers or relative percentages</li>
+                <li><b>Time Animation</b>: A pause/play button allows users to activate or deactivate a time-progressing animation</li>
             </ol>
-            <img class="mx-auto d-block" src="./Map_with_star-plot.png">
+            <img class="mx-auto d-block" width="800" src="./International_Arriving_Passengers.png"> <!-- Center image -->
+        </section>
+        <section id="viz2">
+            <br>
+            <br>
+            <h2>Monthly passenger Star Plot (Visualization 2)</h2>
+            <p>This visualization allows the user to select a country and look at the distribution of international passengers flying into that country over all 12 months of the year through a star graph. The design of the star graph allows for users to compare popular vs uncrowded months, as well as visualize the changes over each of the 4 seasons in a year.</p>
+            <hr/>
+            <h3>Key features include</h3>
+            <ol>
+                <li><b>Interactive map</b>: Users are able to select the country they desire. As soon as a country is selected, it is highlighted in green to display the geographic region relevant to the respective star plot.</li>
+                <li><b>Star Plot</b>: The appropriate data (i.e. average number of flights across the years 2005-2021 of the number of passengers in each country per month) is shown as a star graph with 12 partitions, one for each month of the year.</li>
+                <li><b>Hover Information</b>: Hovering over a particular data point in the star graph reveals the total number of international passengers arriving in that month for the currently selected country.</li>
+            </ol>
+            <hr/>
+            <h3>Enhancement</h3>
+            <ol>
+                <li><b>Grouping of climate regions</b>: Instead of showing data only per country, a radio button next to the map of Europe makes it possible to group countries based on their approximate climate regions. Mediterranean countries such as Italy, Greece, Spain but also nordic countries such as Sweden, Norway and Finland can be grouped together since they might follow the same distribution of tourism over the year. In order to clarify which countries belong to a certain group, the name of each country is listed next to the respective radio button.</li>
+                <li><b>Comparing years of the same country</b>: Instead of showing the average number of flights across multiple years, this enhancement is focused on comparing two particular years for a selected country with one another in absolute numbers. This makes it possible to e.g. better understand the implications of lockdowns (comparing 2019 and 2020 for countries such as Spain) but also provide a general understanding by how much air traffic has increased over a certain timeframe.</li>
+            </ol>
+            <img class="mx-auto d-block" src="./Map_with_star-plot.png"> <!-- Center image -->
         </section>
         <section id="demo">
-            <br>
-            <br>
             <h2>Demo Video</h2>
+            <p>To be continued in Milestone 3</p>
         </section>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
