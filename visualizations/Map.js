@@ -81,12 +81,12 @@ class MapPlot {
 
 
 		// Get the data set for the countries
-		const passengers_promise = d3.json("data/europe_passengers/europe_passengers_per_month.json").then((data) => {
+		const passengers_promise = d3.json("./Data/europe_passengers/europe_passengers_per_month.json").then((data) => {
 			return data
 		});
 
 		// Get the map topoJson info
-		const map_promise = d3.json("data/map/europe_map.json").then((topojson_raw) => {
+		const map_promise = d3.json("./Data/Map/europe_map.json").then((topojson_raw) => {
 			const country_paths = topojson.feature(topojson_raw, topojson_raw.objects.countries);
 			return country_paths.features;
 		});
