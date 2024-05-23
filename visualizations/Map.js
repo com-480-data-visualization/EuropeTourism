@@ -308,6 +308,7 @@ class MapPlot {
 
 			// Function called when hover over a country
 			var mouseover = function(d) {
+				console.log("4")
 				var num = currentYear == "0" ? d.properties.total[parseInt(formatFromSlider(x.invert(currentValue))) - 1] : d.properties.tourists[currentYear][parseInt(formatFromSlider(x.invert(currentValue))) - 1]
 				if (rel_b) {
 					num = currentYear == "0" ? d.properties.total_proportion[parseInt(formatFromSlider(x.invert(currentValue))) - 1] : d.properties.tourist_proportion[currentYear][parseInt(formatFromSlider(x.invert(currentValue))) - 1]
@@ -322,6 +323,7 @@ class MapPlot {
 			}
 			
 			var mousemove = function(d) {
+				console.log("5")
 				var num = currentYear == "0" ? d.properties.total[parseInt(formatFromSlider(x.invert(currentValue))) - 1] : d.properties.tourists[currentYear][parseInt(formatFromSlider(x.invert(currentValue))) - 1]
 				if (rel_b) {
 					num = currentYear == "0" ? d.properties.total_proportion[parseInt(formatFromSlider(x.invert(currentValue))) - 1] : d.properties.tourist_proportion[currentYear][parseInt(formatFromSlider(x.invert(currentValue))) - 1]
@@ -334,6 +336,7 @@ class MapPlot {
 			}
 			
 			var mouseout = function(d) {
+				console.log("5")
 				tooltip2
 					.style("opacity", 0)
 					.style("visibility", "hidden");
@@ -398,6 +401,7 @@ class MapPlot {
 
 			total_button
 			.on("click", function() {
+				console.log("1")
 				rel_b = false;
 				this.rel_b = false;
 
@@ -413,6 +417,7 @@ class MapPlot {
 
 			prop_button
 			.on("click", function() {
+				console.log("2")
 				rel_b = true;
 				this.rel_b = true;
 
@@ -427,6 +432,7 @@ class MapPlot {
 
 			year_selector
 			.on("change", function() {
+				console.log("3")
 				var selectedOption = d3.select(this).node().selectedOptions[0].value;
 				currentYear = selectedOption
 				this.currentYear = selectedOption
