@@ -150,12 +150,9 @@ whenDocumentLoaded(() => {
 		countries.forEach(country => {
 			country.addEventListener('click', () => {
 				// Log the clicked country's id
-				//console.log(country.id);
+				console.log(country.id);
 				//plot_object.foo("ESP")
 				plot_object.foo("ESP")//@chatGPT: prints Uncaught TypeError: plot_object.foo is not a function
-				let countryCode = country.id
-				console.log("countrycode:"+countryCode)
-				plot_object.update_country_displayed(countryCode)
 
 				// Remove the 'selected-country' class from the previously selected country
 				if (currentCountry) {
