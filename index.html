@@ -118,7 +118,6 @@
             }
 
             update_country_displayed(ctry_code) {
-                this.star_graph_set_up();
                 console.log("\t inside update_country_displayed with parameter:"+ctry_code)
                 let colors = ["darkorange", "gray", "navy"];
                 let line = d3.line()
@@ -133,10 +132,14 @@
                     }
                     return coordinates;
                 };
-                this.data.push(this.avgs_processed[ctry_code]);
-                console.log(this.data)
 
+                // updates the data to be displayed on the star plot
+                this.data = [this.avgs_processed[ctry_code]];
 
+                // clears the old star plot from the screen
+                // creates a new star plot with updated country data
+                this.svg.remove();
+                this.svg = this.star_graph_set_up();
                 this.svg.selectAll("path")
                     .data(this.data)
                     .join(
