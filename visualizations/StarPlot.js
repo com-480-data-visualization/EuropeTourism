@@ -95,7 +95,7 @@ class StarPlot {
 		});
 
 		// Update display for the default country (e.g., GBR)
-		this.update_country_displayed("GBR");
+		// this.update_country_displayed("GBR");
 	}
 
 	update_country_displayed(ctry_code) {
@@ -113,7 +113,14 @@ class StarPlot {
 			}
 			return coordinates;
 		};
-		this.data.push(this.avgs_processed[ctry_code]);
+
+		// updates the data to be displayed on the star plot
+		this.data = [this.avgs_processed[ctry_code]];
+
+		// clears the old star plot from the screen
+		// creates a new star plot with updated country data
+		this.svg.remove();
+		this.svg = this.star_graph_set_up();
 		this.svg.selectAll("path")
 			.data(this.data)
 			.join(
@@ -127,44 +134,48 @@ class StarPlot {
 					.attr("opacity", 0.5)
 			);
 	}
-	foo(string){
-		console.log(string)
-	}
 }
 
 function whenDocumentLoaded(action) {
 	if (document.readyState === "loading") {
 		document.addEventListener("DOMContentLoaded", action);
 	} else {
-		console.log("test")
+		console.log("test1")
 		action();
 	}
 }
 
+let plot_object;
+
 whenDocumentLoaded(() => {
+	console.log("test1")
 	plot_object = new StarPlot('star-plot');
-	document.addEventListener('DOMContentLoaded', () => {
-		let currentCountry = undefined
-		const countries = document.querySelectorAll('.js-country');
 
-		countries.forEach(country => {
-			country.addEventListener('click', () => {
-				// Log the clicked country's id
-				console.log(country.id);
-				//plot_object.foo("ESP")
-				plot_object.foo("ESP")//@chatGPT: prints Uncaught TypeError: plot_object.foo is not a function
+	const countries = document.querySelectorAll('.js-country');
+	countries.forEach(country => {
+		country.addEventListener('click', () => {
+			// Log the clicked country's id
+			console.log("country was clicked")
+			console.log(country.id);
 
-				// Remove the 'selected-country' class from the previously selected country
-				if (currentCountry) {
-					document.getElementById(currentCountry).classList.remove('selected-country');
-				}
+			// Call the foo method of plot_object
+			//plot_object.foo("ESP");
+			//this.update_country_displayed("GBR");
+			plot_object.update_country_displayed(country.id);
 
-				// Update the currentCountry variable
-				currentCountry = country.id;
 
-				// Add the 'selected-country' class to the clicked country
-				country.classList.add('selected-country');
-			});
+			// Remove the 'selected-country' class from the previously selected country
+			if (currentCountry) {
+				document.getElementById(currentCountry).classList.remove('selected-country');
+			}
+
+
+			// Update the currentCountry variable
+			currentCountry = country.id;
+
+
+			// Add the 'selected-country' class to the clicked country
+			country.classList.add('selected-country');
 		});
 	});
 });
