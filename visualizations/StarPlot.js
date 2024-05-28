@@ -99,7 +99,6 @@ class StarPlot {
 	}
 
 	update_country_displayed(ctry_code) {
-		console.log("\t inside update_country_displayed with parameter:"+ctry_code)
 		let colors = ["darkorange", "gray", "navy"];
 		let line = d3.line()
 			.x(d => d.x)
@@ -140,7 +139,6 @@ function whenDocumentLoaded(action) {
 	if (document.readyState === "loading") {
 		document.addEventListener("DOMContentLoaded", action);
 	} else {
-		console.log("test1")
 		action();
 	}
 }
@@ -148,15 +146,18 @@ function whenDocumentLoaded(action) {
 let starPlot;
 
 whenDocumentLoaded(() => {
-	console.log("test1")
 	starPlot = new StarPlot('star-plot');
 
 	const countries = document.querySelectorAll('.js-country');
 	countries.forEach(country => {
-		country.addEventListener('click', function() {
+		country.addEventListener('click', (element)=> {
 			// Log the clicked country's id
-			console.log("country was clicked")
-			console.log(country.id);
+
+			console.log("The country "+country.id+" was clicked");
+			console.log(typeof(country.id))
+			test=""+country.id
+			console.log(typeof(test))
+			console.log(document.getElementById(country.id).classList)
 
 			// Call the foo method of starPlot
 			//this.update_country_displayed("GBR");
@@ -164,17 +165,25 @@ whenDocumentLoaded(() => {
 
 
 			// Remove the 'selected-country' class from the previously selected country
-			if (currentCountry) {
+			console.log("currentcountry:")
+			console.log()
+			//console.log(currentCountry)
+			if(!(typeof currentCountry === 'undefined')){
+			//if(currentCountry){
 				document.getElementById(currentCountry).classList.remove('selected-country');
 			}
 
 
 			// Update the currentCountry variable
 			currentCountry = country.id;
+			console.log("currentcountry:"+currentCountry)
 
-
+			console.log(document.getElementById(currentCountry))
 			// Add the 'selected-country' class to the clicked country
-			country.classList.add('selected-country');
+			var selectedCountry = document.getElementById(currentCountry);
+			console.log(selectedCountry.classList)
+			selectedCountry.classList.add('selected-country');
+			console.log(selectedCountry.classList)
 		});
 	});
 });
