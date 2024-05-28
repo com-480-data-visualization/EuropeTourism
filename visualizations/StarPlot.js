@@ -145,23 +145,22 @@ function whenDocumentLoaded(action) {
 	}
 }
 
-let plot_object;
+let starPlot;
 
 whenDocumentLoaded(() => {
 	console.log("test1")
-	plot_object = new StarPlot('star-plot');
+	starPlot = new StarPlot('star-plot');
 
 	const countries = document.querySelectorAll('.js-country');
 	countries.forEach(country => {
-		country.addEventListener('click', () => {
+		country.addEventListener('click', function() {
 			// Log the clicked country's id
 			console.log("country was clicked")
 			console.log(country.id);
 
-			// Call the foo method of plot_object
-			//plot_object.foo("ESP");
+			// Call the foo method of starPlot
 			//this.update_country_displayed("GBR");
-			plot_object.update_country_displayed(country.id);
+			starPlot.update_country_displayed(country.id);
 
 
 			// Remove the 'selected-country' class from the previously selected country
