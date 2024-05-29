@@ -170,7 +170,7 @@ whenDocumentLoaded(() => {
 			//console.log(currentCountry)
 			if(!(typeof currentCountry === 'undefined')){
 			//if(currentCountry){
-				document.getElementById(currentCountry).classList.remove('selected-country');
+				document.getElementById(currentCountry).classList.remove('js-selected-country');
 			}
 
 
@@ -182,7 +182,7 @@ whenDocumentLoaded(() => {
 			// Add the 'selected-country' class to the clicked country
 			var selectedCountry = document.getElementById(currentCountry);
 			console.log(selectedCountry.classList)
-			selectedCountry.classList.add('selected-country');
+			selectedCountry.classList.add('js-selected-country');
 			console.log(selectedCountry.classList)
 		});
 	});

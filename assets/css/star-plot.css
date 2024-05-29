@@ -1,0 +1,11 @@
+svg {
+    width: 100%;
+    height: auto;
+}
+.js-country:hover {
+    fill: #76cc81 !important;
+    cursor: pointer;
+}
+svg#js-europe-map path.js-selected-country {
+    fill: #024812 !important; /* Highlight color for selected country */
+}
