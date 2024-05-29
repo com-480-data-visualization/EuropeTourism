@@ -21,7 +21,7 @@ img.centered {
     display: block;
 	height: 40%
 }
-
+/*
 nav {
 	float: right;
 }
@@ -40,8 +40,8 @@ nav ul li a {
 	text-decoration: none;
 }
 .content {
-	margin-right: 20px; /* Adjust according to the navbar width */
-}
+	margin-right: 20px; /* Adjust according to the navbar width
+}*/
 section {
 	padding: 20px;
 	height: 125vh; /* Set height to full viewport height */

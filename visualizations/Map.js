@@ -282,7 +282,7 @@ class MapPlot {
 
 				if (!rel_b) {
 					// Data is absolute
-					console.log(currentYear)
+					console.log("Current year" + currentYear)
 					countries.style("fill", (d) => currentYear == "0" ?
 					color_scale_tourists(d.properties.total[parseInt(month) - 1]) :
 					color_scale_tourists(d.properties.tourists[currentYear][parseInt(month) - 1]));
