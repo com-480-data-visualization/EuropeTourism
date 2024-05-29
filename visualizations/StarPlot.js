@@ -4,7 +4,7 @@ class StarPlot {
 		this.features = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 		this.months_indexed = {1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5:"May", 6:"Jun", 7: "Jul", 8: "Aug", 9: "Sep", 10: "Oct", 11: "Nov", 12: "Dec"};
 		this.avgs_processed = {};
-		this.width = 600;
+		this.width = 550;
 		this.height = 600;
 		this.radialScale = d3.scaleLinear()
 			.domain([0, 20000000])
@@ -23,7 +23,7 @@ class StarPlot {
 
 	star_graph_set_up() {
 		// set up general radial circle
-		let svg = d3.select("body").append("svg")
+		let svg = d3.select("#parent-star-plot").append("svg")
 			.attr("width", this.width)
 			.attr("height", this.height);
 
@@ -99,7 +99,7 @@ class StarPlot {
 	}
 
 	update_country_displayed(ctry_code) {
-		let colors = ["darkorange", "gray", "navy"];
+		let colors = ["green", "gray", "navy"];
 		let line = d3.line()
 			.x(d => d.x)
 			.y(d => d.y);
@@ -160,8 +160,10 @@ whenDocumentLoaded(() => {
 			console.log(document.getElementById(country.id).classList)
 
 			// Call the foo method of starPlot
-			//this.update_country_displayed("GBR");
 			starPlot.update_country_displayed(country.id);
+
+			// Update the display of the Selected Country:
+			document.getElementById("current-selected-country").textContent=country.id;
 
 
 			// Remove the 'selected-country' class from the previously selected country
