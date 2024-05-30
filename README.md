@@ -148,8 +148,23 @@ D3.js maps with TopoJSON and lectures Maps and Practical maps, as well as exerci
 ## Milestone 3 (31st May, 5pm)
 
 **80% of the final grade**
-
-
+### Setting up the project
+- Step 1: Check if the project can be opened. If not, go to step 2; otherwise go to step 3.
+  - Note: It is recommended to open the project via IntelliJ or any other JetBrians product (since they set up a webserver when opening the index.html file).
+- Step 2: Setting up a webserver
+  - Note:  In order to load the .json files, one might face "CORS-Policy" problems. In order to prevent this, a local webserver is needed. This can be achieved by these 3 steps:
+  - A: Installing the needed NPM module (we assume that NPM is already installed): ```npm install -g http-server```
+  - B: Creating a webserver by running ```http-server -p 8000```
+  - C: Open ```http://localhost:8000/``` in the browser; all files should be loaded and the first map(i.e. visualization 1) should be visible
+- Step 3: Reading the introduction text and click around in "Passenger Map" (Visualization 1) and check out the key features. Users should try out the following options/interactions
+  - Change the year via the dropdown menu
+  - Change the month via the slider
+  - Change from proportional data to total data by clicking on the respective buttons
+  - Hover over countries to receive detailed information about the passenger numbers
+- Step 4: Click around in "Monthly Passenger Star Plot" (Visualization 2)
+  - Hover over a point of Europe to see the related country highlighted in light green
+  - Select a country by clicking on it. The country is marked in dark-green and the full name of the country is displayed in the text above the map.
+  - 
 ## Late policy
 
 - < 24h: 80% of the grade for the milestone
