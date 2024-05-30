@@ -4,11 +4,12 @@ class StarPlot {
 		this.features = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 		this.months_indexed = {1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5:"May", 6:"Jun", 7: "Jul", 8: "Aug", 9: "Sep", 10: "Oct", 11: "Nov", 12: "Dec"};
 		this.avgs_processed = {};
-		this.width = 550;
-		this.height = 600;
+		this.radius = 150;
+		this.width = 350;
+		this.height = 350;
 		this.radialScale = d3.scaleLinear()
 			.domain([0, 20000000])
-			.range([0, 250]);
+			.range([0, this.radius]);
 		this.svg = this.star_graph_set_up();
 
 		d3.json("./Data/europe_passengers/avg_by_year.json")
