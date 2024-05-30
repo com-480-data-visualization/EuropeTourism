@@ -148,7 +148,7 @@ D3.js maps with TopoJSON and lectures Maps and Practical maps, as well as exerci
 ## Milestone 3 (31st May, 5pm)
 
 **80% of the final grade**
-### Setting up the project
+### 1. Setting up the project
 - Step 1: Check if the project can be opened. If not, go to step 2; otherwise go to step 3.
   - Note: It is recommended to open the project via IntelliJ or any other JetBrians product (since they set up a webserver when opening the index.html file).
 - Step 2: Setting up a webserver
@@ -156,17 +156,52 @@ D3.js maps with TopoJSON and lectures Maps and Practical maps, as well as exerci
   - A: Installing the needed NPM module (we assume that NPM is already installed): ```npm install -g http-server```
   - B: Creating a webserver by running ```http-server -p 8000```
   - C: Open ```http://localhost:8000/``` in the browser; all files should be loaded and the first map(i.e. visualization 1) should be visible
-- Step 3: Reading the introduction text and click around in "Passenger Map" (Visualization 1) and check out the key features. Users should try out the following options/interactions
-  - Change the year via the dropdown menu
-  - Change the month via the slider
-  - Change from proportional data to total data by clicking on the respective buttons
-  - Hover over countries to receive detailed information about the passenger numbers
-- Step 4: Click around in "Monthly Passenger Star Plot" (Visualization 2)
-  - Hover over a point of Europe to see the related country highlighted in light green
-  - Select a country by clicking on it. The country is marked in dark-green and the full name of the country is displayed in the text above the map.
-  - 
-## Late policy
 
-- < 24h: 80% of the grade for the milestone
-- < 48h: 70% of the grade for the milestone
+### 2. Technical Setup
+Technologies used:
+  - HTML, CSS
+    - CSS: Bootstrap 5 was used by importing a CDN. We used this approach to have a basic skeleton for our grid system and the navigation bar.
+  - JavaScript
+    - TopoJSON & D3.js: as previously described in Milestone 2, this was needed for the implementation of Visualization 1 and Visualization 2 as well.
+    - jQuery: for various DOM Operations (e.g. selecting/adding DOM-nodes)
+    - Map.js: includes logic for Visualization 1
+    - StarPlot.js: includes logic for Visualization 2
 
+### 3. Intended Usage of both Visualizations
+#### 3.1. Visualization 1
+  - Click on "Passenger Map" (Visualization 1) in navigation bar 
+  - Users should try out the following options/interactions
+    - Change the year via the dropdown menu
+    - Change the month via the slider
+    - Change from proportional data to total data by clicking on the respective buttons
+    - Hover over countries to receive detailed information about the passenger numbers
+
+#### 3.2. Visualization 2
+  - Click around in "Monthly Passenger Star Plot" (Visualization 2) in navigation bar
+  - Users should try out the following options/interactions
+    - Hover over a point of Europe to see the related country highlighted in light green
+    - Select a country by clicking on it. The country is marked in dark-green and the full name of the country is displayed in the text above the map.
+    - The star plot right next to the map shows the aggregated monthly passengers in light green
+
+#### 3.3. Interesting insights about our two Visualizations
+- Visualization 1
+  - Total across all years and total scale: Great Britain, Germany, France, Spain: High amount of passengers
+  - Total across all years and total scale: Increase for summer months across all of Europe
+  - Total across all years and proportional scale: Great Britain has most air traffic, followed by Germany. Spain also has high amount of passengers, especially in summer.
+  - 2019: year right before COVID, very intensive flight behaviour across all of Europe
+  - 2020 January & February: still similar to 2019, still very busy
+  - 2020 March: drastic decrease of passengers
+  - 2020 April, May, June: Lockdowns all across Europe, Airtravel came to a halt
+  - 2020 July: Slight increase due to less infections and some summer tourism, still far less than same period in 2019
+  - 2020 November, December: also high decrease of air travel due to infection rates
+  - 2021: Lockdowns are still visible, but less drastic decrease than in 2020
+
+- Visualization 2
+  - Germany, UK, France, Spain (Example for large population): Generally high amount of passengers, especially in summer
+  - Greece, Turkey (Example for tourist regions): Drastic increase during summer months, very similar to one another.
+  - Sweden, Austria (Smaller countries): Seem to have rather stable amount of passengers across the whole year, still increase in summer though
+  - Norway/Sweden: Despite northern lights: No increase in flight passengers in winter (when northern lights are visible the most)
+
+### 4. Screencast
+#### 4.1. Download via OneDrive [here](https://1drv.ms/v/s!Avwt_tQD0h-U8inJbCzL-d0o0Zn4?e=PGlpHU)
+#### 4.2. Stream it via Youtube [here](https://youtu.be/ybD3KAz3-NU?si=Naj36uZ3oWoxGOUf)
