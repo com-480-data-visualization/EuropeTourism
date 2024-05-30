@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="./index.css" />-->
+    <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./assets/css/star-plot.css" />
     <title>Tourism in Europe Throughout the Year</title>
     <script src="./lib/d3.min.js"></script>
@@ -17,7 +17,7 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg bg-primary">
+    <nav class="navbar navbar-expand-lg" style="background-color: #76aaf9;">
         <div class="container">
             <a class="navbar-brand" href="#">Home</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,10 +32,10 @@
                         <a class="nav-link" href="#viz1">Passenger Map</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#viz2">Monthly passenger Star Plot</a>
+                        <a class="nav-link" href="#viz2">Monthly Passenger Star Plot</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true" href="#demo">Demo Video</a>
+                        <a class="nav-link" href="#demo">Demo Video</a>
                     </li>
                 </ul>
             </div>
@@ -45,9 +45,8 @@
 <div class="container">
     <section id="home">
         <br>
-        <br>
-        <h2>Tourism in Europe Throughout the Year</h2>
-        <h4>The tourism industry in Europe generates a lot of income for many different countries.
+        <h2 >Tourism in Europe Throughout the Year</h2>
+        <p style="color: lightslategrey;">The tourism industry in Europe generates a lot of income for many different countries.
             Europe receives hundreds of millions of tourists each year which oftentimes leads to crowding, especially near tourist attractions.
             Some people do not mind the clutter, yet many tourists struggle to find the right time to visit a country in Europe when it is least touristy.
             Some people feel the experiences are diluted when countries are overrun with tourists and that it takes away the authentic feeling of visiting a new country.
@@ -64,27 +63,22 @@
             <br>
             <br>
             &nbsp;&nbsp;&nbsp;<b>3.</b> How does the number of passengers entering each country change throughout the year?
-        </h4>
+        </p>
         <br>
     </section>
     <section id="viz1">
         <div id="map_header">
             <br>
-            <br>
             <h2>Map of International Passengers Arriving Throughout the Year</h2>
-            <p style="color: lightslategrey;">This visualization allows the user to see how busy a country is with tourists in each given month and how it changes throughout the years.
-                Users can explore the data through an interactive map and slider. Key features include:
-                <br>
-                <br>
-                &nbsp;&nbsp;&nbsp;1. <b>Map Representation</b>: A map of Europe displaying countries colored according to tourist "busyness," with darker red indicating /”hotter” tourist activity and lighter red indicating lower/”less hot” activity.
-                <br>
-                &nbsp;&nbsp;&nbsp;2. <b>Interactive Slider</b>: Users can select a specific month to observe changes in tourist activity throughout the year.
-                <br>
-                &nbsp;&nbsp;&nbsp;3. <b>Year Selection</b>: Users can choose between viewing the average tourist activity from 2005 to 2020 or select a specific year within that range.
-                <br>
-                &nbsp;&nbsp;&nbsp;4. <b>Hover Information</b>: Hovering over a country reveals the total number of international passengers arriving in that country for the selected month.</h4>
-                <br>
-            </p>
+            <p style="color: lightslategrey;">This visualization allows the user to see how busy a country is with tourists in each given month and how it changes throughout the years. Users can explore the data through an interactive map and slider.</p>
+            <hr/>
+            <h3>Key features include</h3>
+            <ol>
+                <li style="color: lightslategrey;"><b>Map Representation</b>: A map of Europe displaying countries colored according to tourist "busyness," with darker red indicating ”hotter” tourist activity and lighter red indicating lower ”less hot” activity.</li>
+                <li style="color: lightslategrey;"><b>Interactive Slider</b>: Users can select a specific month to observe changes in tourist activity throughout the year.</li>
+                <li style="color: lightslategrey;"><b>Year Selection</b>: Users can choose between viewing the average tourist activity from 2005 to 2020 or select a specific year within that range.</li>
+                <li style="color: lightslategrey;"><b>Hover Information</b>: Hovering over a country reveals the total number of international passengers arriving in that country for the selected month.</li>
+            </ol>
         </div>
         <div class="inner" style = "background-color : #022F40; border-radius : 10px; padding: 10px">
             <div style="text-align : center">
@@ -116,8 +110,13 @@
                     <svg id="slider" viewBox="0 0 960 100" width="55%">
                         <style>
                             body {
-                                font-family:"avenir next", Arial, sans-serif;
-                                font-size: 12px;
+                                font-family:"avenir next", Georgia , sans-serif;
+                                font-size: 18px;
+                            }
+                            .navbar {
+                                -webkit-box-shadow: 0 8px 6px -6px #999;
+                                -moz-box-shadow: 0 8px 6px -6px #999;
+                                box-shadow: 0 8px 6px -6px #999;
                             }
                             .ticks {
                                 font-size: 10px;

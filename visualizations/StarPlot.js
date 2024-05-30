@@ -11,6 +11,43 @@ class StarPlot {
 			.domain([0, 20000000])
 			.range([0, this.radius]);
 		this.svg = this.star_graph_set_up();
+		this.countryMap = new Map([
+            ["AUT", "Austria"],
+            ["BEL", "Belgium"],
+            ["BGR", "Bulgaria"],
+            ["CHE", "Switzerland"],
+            ["CYP", "Cyprus"],
+            ["CZE", "Czech Republic"],
+            ["DEU", "Germany"],
+            ["DNK", "Denmark"],
+            ["ESP", "Spain"],
+            ["EST", "Estonia"],
+            ["FIN", "Finland"],
+            ["FRA", "France"],
+            ["GBR", "United Kingdom"],
+            ["GRC", "Greece"],
+            ["HRV", "Croatia"],
+            ["HUN", "Hungary"],
+            ["IRL", "Ireland"],
+            ["ISL", "Iceland"],
+            ["ITA", "Italy"],
+            ["LTU", "Lithuania"],
+            ["LUX", "Luxembourg"],
+            ["LVA", "Latvia"],
+            ["MKD", "North Macedonia"],
+            ["MLT", "Malta"],
+            ["MNE", "Montenegro"],
+            ["NLD", "Netherlands"],
+            ["NOR", "Norway"],
+            ["POL", "Poland"],
+            ["PRT", "Portugal"],
+            ["ROU", "Romania"],
+            ["SRB", "Serbia"],
+            ["SVK", "Slovakia"],
+            ["SVN", "Slovenia"],
+            ["SWE", "Sweden"],
+            ["TUR", "Turkey"]
+        ]);
 
 		d3.json("./Data/europe_passengers/avg_by_year.json")
 			.then(load_data => this.process_avgs_by_country(load_data));
@@ -134,6 +171,10 @@ class StarPlot {
 					.attr("opacity", 0.5)
 			);
 	}
+	// Method to get the country name by its code
+	getCountryName(countryCode) {
+		return this.countryMap.get(countryCode);
+	}
 }
 
 function whenDocumentLoaded(action) {
@@ -163,8 +204,8 @@ whenDocumentLoaded(() => {
 			// Call the foo method of starPlot
 			starPlot.update_country_displayed(country.id);
 
-			// Update the display of the Selected Country:
-			document.getElementById("current-selected-country").textContent=country.id;
+			// Update the display of the Selected Country
+			document.getElementById("current-selected-country").textContent=starPlot.getCountryName(country.id);
 
 
 			// Remove the 'selected-country' class from the previously selected country
