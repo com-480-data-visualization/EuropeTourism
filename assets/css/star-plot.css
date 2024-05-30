@@ -9,3 +9,8 @@ svg {
 svg#js-europe-map path.js-selected-country {
     fill: #024812 !important; /* Highlight color for selected country */
 }
+
+#parent-star-plot > svg {
+    overflow:visible;
+    padding: 40px;
+}
