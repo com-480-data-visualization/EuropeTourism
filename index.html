@@ -26,16 +26,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        <a class="nav-link mx-2" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#viz1">Passenger Map</a>
+                        <a class="nav-link mx-2" href="#viz1">Passenger Map</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#viz2">Monthly Passenger Star Plot</a>
+                        <a class="nav-link mx-2" href="#viz2">Monthly Passenger Star Plot</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#demo">Demo Video</a>
+                        <a class="nav-link mx-2" href="#demo">Demo Video</a>
                     </li>
                 </ul>
             </div>
@@ -80,9 +80,9 @@
                 <li style="color: lightslategrey;"><b>Hover Information</b>: Hovering over a country reveals the total number of international passengers arriving in that country for the selected month.</li>
             </ol>
         </div>
-        <div class="inner" style = "background-color : #022F40; border-radius : 10px; padding: 10px">
+        <div id="inner-map" class="inner">
             <div style="text-align : center">
-                <div id="map_div" >
+                <div id="map_div">
                     <svg id="map-plot" viewBox="0 0 1000 550" width="55%">
                         <style>
                             .country {
@@ -103,6 +103,19 @@
                                 text-align: left;
                                 color: white;
                             }
+                            #colorbar, #slider {
+                                color: #ffffff;
+                            }
+                            #inner-map {
+                                background-color : #022F40;
+                                border-radius : 10px;
+                                padding: 10px;
+                                background-color: #045371;/*#045371*/
+                            }
+                            #map_div {
+                                position: relative;/*needed for positioning of tooltip*/
+                            }
+
                         </style>
                     </svg>
                 </div>
@@ -147,6 +160,9 @@
                                 stroke-opacity: 0.5;
                                 stroke-width: 1.25px;
                             }
+                            #year-select-label {
+                                color: #ffffff;
+                            }
                         </style>
                     </svg>
                 </div>
@@ -155,7 +171,7 @@
                     <div><button id ="total-btn" style = "background-color: #39A9DB; color: rgb(255,255,255) !important">Total</button></div>
                     <div><button id ="prop-btn" style = "background-color: #1C77C3; color: rgb(255,255,255) !important">Proportional</button></div>
                     <div style="text-align: center">
-                        <label for="year-select">Select Year:</label>
+                        <label id="year-select-label" for="year-select">Select Year:</label>
                         <select id="year-select">
                             <option value="0">Total</option>
                             <option value="2021">2021</option>
