@@ -1,3 +1,8 @@
-:root {
-	/* --bs-body-color: #ff9900 !important; */
+body {
+    transform: scale(0.6); /* Scales the content to 50% */
+    transform-origin: top left; /* Keeps the content anchored to the top left */
+    width: 167%; /* Compensates for the 50% scaling to keep the layout consistent */
+    height: auto; /* Compensates for the 50% scaling to keep the layout consistent */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    overflow-y: auto; /* Allows vertical scrolling if needed */
 }
