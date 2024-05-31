@@ -261,6 +261,7 @@ class MapPlot {
 				.attr("text-anchor", "middle")
 				.text('January')
 				.attr("fill", "CurrentColor")
+				.attr("font-size", "18px")
 				.attr("transform", "translate(0," + (-25) + ")")
 
 			// Slider circle marker
