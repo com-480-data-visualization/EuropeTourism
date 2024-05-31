@@ -152,6 +152,7 @@ D3.js maps with TopoJSON and lectures Maps and Practical maps, as well as exerci
 <a href="https://com-480-data-visualization.github.io/EuropeTourism/#viz1">Website</a>
 
 <a href="Process Book Milestone 3.pdf" target="_blank" download>Process Book</a>
+Please open on chrome or a similar browser.
 
 ### 1. Setting up the project if the website link doesn't work
 - Step 1: Check if the project can be opened. If not, go to step 2; otherwise go to step 3.
