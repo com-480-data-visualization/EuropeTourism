@@ -148,7 +148,10 @@ D3.js maps with TopoJSON and lectures Maps and Practical maps, as well as exerci
 ## Milestone 3 (31st May, 5pm)
 
 **80% of the final grade**
-### 1. Setting up the project
+
+<a href="https://com-480-data-visualization.github.io/EuropeTourism/#viz1">Website</a>
+
+### 1. Setting up the project if the website link doesn't work
 - Step 1: Check if the project can be opened. If not, go to step 2; otherwise go to step 3.
   - Note: It is recommended to open the project via IntelliJ or any other JetBrians product (since they set up a webserver when opening the index.html file).
 - Step 2: Setting up a webserver
